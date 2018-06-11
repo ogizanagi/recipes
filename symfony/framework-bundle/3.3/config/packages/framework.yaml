@@ -8,6 +8,11 @@ framework:
     # Remove or comment this section to explicitly disable session support.
     session:
         handler_id: ~
+        # In case you target Debian distributions and use the default session.save_path,
+        # or want to rely on the session.gc_probability value from php.ini,
+        # you may want to keep the default php.ini value by setting the following to null
+        # in order to let the Debian cron job clear the sessions periodically:
+        #gc_probability: ~
 
     #esi: true
     #fragments: true
